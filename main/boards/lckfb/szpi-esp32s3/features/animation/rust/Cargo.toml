@@ -1,0 +1,16 @@
+[package]
+name = "dsh-animation"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["staticlib"]
+
+[profile.release]
+opt-level = 3
+panic = "abort"
+codegen-units = 1
+
+[profile.dev]
+panic = "abort"

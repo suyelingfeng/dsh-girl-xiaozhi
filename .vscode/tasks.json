@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "DSH: ESP-IDF 编译", "type": "process", "command": "cmd.exe", "args": ["/d", "/c", "${workspaceFolder}/scripts/esp-idf.cmd", "build"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": ["$espIdf", "$espIdfLd"], "group": {"kind": "build", "isDefault": true}},
+    {"label": "DSH: ESP-IDF 烧录", "type": "process", "command": "cmd.exe", "args": ["/d", "/c", "${workspaceFolder}/scripts/esp-idf.cmd", "-p", "${config:idf.portWin}", "flash"], "dependsOn": "DSH: ESP-IDF 编译", "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": ["$espIdf", "$espIdfLd"]},
+    {"label": "DSH: ESP-IDF 串口监视", "type": "process", "command": "cmd.exe", "args": ["/d", "/c", "${workspaceFolder}/scripts/esp-idf.cmd", "-p", "${config:idf.portWin}", "monitor"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []},
+    {
+      "label": "DSH: Rust 模块测试",
+      "type": "process",
+      "command": "cargo",
+      "args": ["+stable", "test", "--manifest-path", "main/boards/lckfb/szpi-esp32s3/features/animation/rust/Cargo.toml", "--target-dir", "build/rust-host-tests"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "label": "DSH: Rust 格式检查",
+      "type": "process",
+      "command": "cargo",
+      "args": ["+esp", "fmt", "--manifest-path", "main/boards/lckfb/szpi-esp32s3/features/animation/rust/Cargo.toml", "--", "--check"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    }
+  ]
+}

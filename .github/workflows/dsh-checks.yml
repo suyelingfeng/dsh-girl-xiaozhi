@@ -1,0 +1,29 @@
+name: DSH source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install resource test dependency
+        run: python -m pip install Pillow
+      - name: Check tracked privacy and complete published history
+        run: python scripts/check_public_privacy.py --history
+      - name: Resource and attitude tests
+        run: |
+          python -m unittest discover -s scripts/tests -p test_dsh_animation.py -v
+          python -m unittest discover -s scripts/tests -p test_build_default_assets.py -v
+          python -m unittest discover -s scripts/tests -p test_pet_attitude.py -v
+      - name: Rust host tests
+        run: cargo +stable test --manifest-path main/boards/lckfb/szpi-esp32s3/features/animation/rust/Cargo.toml --target-dir build/rust-host-tests

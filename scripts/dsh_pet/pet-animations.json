@@ -1,0 +1,108 @@
+{
+  "idle": {
+    "source": "待机呼吸休闲.webm",
+    "emotions": [
+      "neutral",
+      "relaxed",
+      "robot_2"
+    ],
+    "frames": 301,
+    "bytes": 706584
+  },
+  "happy": {
+    "source": "点击回应-开心跃动.webm",
+    "emotions": [
+      "happy"
+    ],
+    "frames": 301,
+    "bytes": 575227
+  },
+  "laughing": {
+    "source": "点击回应-挠痒咯咯笑.webm",
+    "emotions": [
+      "laughing",
+      "funny",
+      "silly"
+    ],
+    "frames": 301,
+    "bytes": 696123
+  },
+  "angry": {
+    "source": "点击回应-傲娇生气.webm",
+    "emotions": [
+      "angry"
+    ],
+    "frames": 301,
+    "bytes": 590168
+  },
+  "shy": {
+    "source": "点击回应-害羞惊讶.webm",
+    "emotions": [
+      "embarrassed"
+    ],
+    "frames": 301,
+    "bytes": 913115
+  },
+  "wave": {
+    "source": "点击回应-元气挥手.webm",
+    "emotions": [
+      "cool",
+      "confident",
+      "winking"
+    ],
+    "frames": 301,
+    "bytes": 561262
+  },
+  "sad": {
+    "source": "工作状态-垂头叹气冒汗.webm",
+    "emotions": [
+      "sad",
+      "crying"
+    ],
+    "frames": 147,
+    "bytes": 274277
+  },
+  "surprised": {
+    "source": "被吓一跳.webm",
+    "emotions": [
+      "surprised",
+      "shocked"
+    ],
+    "frames": 301,
+    "bytes": 412288
+  },
+  "sleepy": {
+    "source": "原地小憩沉眠.webm",
+    "emotions": [
+      "sleepy"
+    ],
+    "frames": 301,
+    "bytes": 559745
+  },
+  "thinking": {
+    "source": "工作状态-思考冒泡.webm",
+    "emotions": [
+      "thinking",
+      "confused"
+    ],
+    "frames": 301,
+    "bytes": 507717
+  },
+  "delicious": {
+    "source": "大口吃零食.webm",
+    "emotions": [
+      "delicious"
+    ],
+    "frames": 301,
+    "bytes": 262111
+  },
+  "loving": {
+    "source": "女仆屈膝礼仪.webm",
+    "emotions": [
+      "loving",
+      "kissy"
+    ],
+    "frames": 301,
+    "bytes": 608987
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "idf.portWin": "COM3",
+    "idf.flashType": "UART",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "rust-analyzer.linkedProjects": ["main/boards/lckfb/szpi-esp32s3/features/animation/rust/Cargo.toml"],
+    "rust-analyzer.cargo.targetDir": "${workspaceFolder}/build/rust-analyzer",
+    "rust-analyzer.check.extraArgs": ["--tests"],
+    "rust-analyzer.cargo.extraEnv": {"RUSTUP_TOOLCHAIN": "stable"}
+}
